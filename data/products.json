@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "Black Abaya",
+    "price": 29.99
+  },
+  {
+    "id": 2,
+    "name": "Floral Abaya",
+    "price": 29.99
+  },
+  {
+    "id": 3,
+    "name": "Beige Abaya",
+    "price": 29.99
+  },
+  {
+    "id": 4,
+    "name": "Elegant Necklace",
+    "price": 19.99
+  },
+  {
+    "id": 5,
+    "name": "Stylish Bracelet",
+    "price": 14.99
+  },
+  {
+    "id": 6,
+    "name": "Chic Earrings",
+    "price": 12.99
+  },
+  {
+    "id": 7,
+    "name": "Classic Chiffon Scarf",
+    "price": 17.99
+  },
+  {
+    "id": 8,
+    "name": "Floral Chiffon Scarf",
+    "price": 17.99
+  },
+  {
+    "id": 9,
+    "name": "Regular Scarf",
+    "price": 15.99
+  },
+  {
+    "id": 10,
+    "name": "Calm Palette Scarf",
+    "price": 15.99
+  },
+  {
+    "id": 11,
+    "name": "Beige Scarf",
+    "price": 15.99
+  }
+]
