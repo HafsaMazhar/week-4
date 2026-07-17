@@ -1,5 +1,17 @@
 # ModestPearls Backend API
+## Week 3 Progress
 
+This week focused on backend development and database integration.
+
+### Completed Tasks
+- Connected MongoDB using Mongoose.
+- Configured the Express.js server.
+- Created Product and Cart models.
+- Implemented Products API.
+- Implemented Cart API.
+- Connected the frontend "Add to Cart" functionality with the backend.
+- Organized the backend folder structure.
+- Successfully tested API endpoints using Postman.
 ## Project Overview
 
 This project is the backend API for the ModestPearls E-commerce Website. It is developed using Node.js and Express.js to handle products, shopping cart operations, and checkout functionality.

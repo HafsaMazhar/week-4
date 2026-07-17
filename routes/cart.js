@@ -1,69 +1,44 @@
 const express = require("express");
 const router = express.Router();
 
-const fs = require("fs");
-const path = require("path");
+const Cart = require("../models/Cart");
 
-const cartFile = path.join(__dirname, "../data/cart.json");
 
-// GET Cart
-router.get("/", (req, res) => {
-
-    const cart = JSON.parse(fs.readFileSync(cartFile));
-
-    res.json(cart);
-
+// GET Cart Items
+router.get("/", async (req, res) => {
+    try {
+        const cart = await Cart.find();
+        res.json(cart);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
 });
 
-// POST Add to Cart
-router.post("/", (req, res) => {
 
-    const { name, price, quantity } = req.body;
+// POST Add Item to Cart
+router.post("/", async (req, res) => {
 
-    // Validation
-    if (!name || !price || !quantity) {
+    try {
 
-        return res.status(400).json({
-            message: "Please provide name, price and quantity."
+        const cartItem = new Cart({
+            productId: req.body.productId,
+            name: req.body.name,
+            price: req.body.price,
+            quantity: req.body.quantity || 1
+        });
+
+        await cartItem.save();
+
+        res.status(201).json(cartItem);
+
+    } catch (error) {
+
+        res.status(400).json({
+            message: error.message
         });
 
     }
 
-    const cart = JSON.parse(fs.readFileSync(cartFile));
-
-    cart.push({
-        name,
-        price,
-        quantity
-    });
-
-    fs.writeFileSync(cartFile, JSON.stringify(cart, null, 2));
-
-    res.status(201).json({
-        message: "Product added to cart successfully!"
-    });
-
 });
-// DELETE Item from Cart
-router.delete("/:index", (req, res) => {
 
-    const index = Number(req.params.index);
-
-    const cart = JSON.parse(fs.readFileSync(cartFile));
-
-    if (index < 0 || index >= cart.length) {
-        return res.status(404).json({
-            message: "Item not found."
-        });
-    }
-
-    cart.splice(index, 1);
-
-    fs.writeFileSync(cartFile, JSON.stringify(cart, null, 2));
-
-    res.json({
-        message: "Item removed successfully!"
-    });
-
-});
 module.exports = router;

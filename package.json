@@ -11,6 +11,10 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "express": "^4.21.2"
+    "cors": "^2.8.6",
+    "express": "^4.21.2",
+    "mongoose": "^8.24.1",
+    "msnodesqlv8": "^5.2.1",
+    "mssql": "^12.7.0"
   }
 }

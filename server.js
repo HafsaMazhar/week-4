@@ -1,15 +1,21 @@
+const cors = require("cors"); 
+console.log("Starting server...");
+const connectDB = require("./config/db");
 const express = require("express");
 
 const app = express();
 const PORT = 3000;
-
+(async () => {
+    await connectDB();
+})();
 app.use(express.json());
+app.use(cors());
 
 // Import Routes
 const productRoutes = require("./routes/products");
 const cartRoutes = require("./routes/cart");
 const checkoutRoutes = require("./routes/checkout");
-console.log(productRoutes);
+
 // Home Route
 app.get("/", (req, res) => {
     res.send("ModestPearls Backend API is Running!");

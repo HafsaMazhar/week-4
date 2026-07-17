@@ -1,0 +1,79 @@
+[
+  {
+    "name": "Black Abaya",
+    "category": "Abaya",
+    "price": 29.99,
+    "description": "Classic black abaya with elegant design.",
+    "image": "images/abaya.jpg"
+  },
+  {
+    "name": "Floral Abaya",
+    "category": "Abaya",
+    "price": 29.99,
+    "description": "Beautiful floral abaya for formal occasions.",
+    "image": "images/abaya.jpg"
+  },
+  {
+    "name": "Beige Abaya",
+    "category": "Abaya",
+    "price": 29.99,
+    "description": "Stylish beige abaya.",
+    "image": "images/abaya.jpg"
+  },
+  {
+    "name": "Elegant Necklace",
+    "category": "Accessories",
+    "price": 19.99,
+    "description": "Elegant necklace for modest fashion.",
+    "image": "images/necklace.jpg"
+  },
+  {
+    "name": "Stylish Bracelet",
+    "category": "Accessories",
+    "price": 14.99,
+    "description": "Stylish bracelet.",
+    "image": "images/bracelet.jpg"
+  },
+  {
+    "name": "Chic Earrings",
+    "category": "Accessories",
+    "price": 12.99,
+    "description": "Elegant earrings.",
+    "image": "images/earrings.jpg"
+  },
+  {
+    "name": "Classic Chiffon Scarf",
+    "category": "Chiffon Scarf",
+    "price": 17.99,
+    "description": "Classic chiffon scarf.",
+    "image": "images/chiffon_scarf.jpg"
+  },
+  {
+    "name": "Floral Chiffon Scarf",
+    "category": "Chiffon Scarf",
+    "price": 17.99,
+    "description": "Floral chiffon scarf.",
+    "image": "images/chiffon_scarf.jpg"
+  },
+  {
+    "name": "Regular Scarf",
+    "category": "Regular Scarf",
+    "price": 15.99,
+    "description": "Regular scarf.",
+    "image": "images/regular_scarf.jpg"
+  },
+  {
+    "name": "Calm Palette Scarf",
+    "category": "Regular Scarf",
+    "price": 15.99,
+    "description": "Calm palette scarf.",
+    "image": "images/regular_scarf.jpg"
+  },
+  {
+    "name": "Beige Scarf",
+    "category": "Regular Scarf",
+    "price": 15.99,
+    "description": "Beige scarf.",
+    "image": "images/regular_scarf.jpg"
+  }
+]
