@@ -1,151 +1,130 @@
-# ModestPearls Backend API
-## Week 3 Progress
+# Week 4 – Frontend & Backend Integration
 
-This week focused on backend development and database integration.
-
-### Completed Tasks
-- Connected MongoDB using Mongoose.
-- Configured the Express.js server.
-- Created Product and Cart models.
-- Implemented Products API.
-- Implemented Cart API.
-- Connected the frontend "Add to Cart" functionality with the backend.
-- Organized the backend folder structure.
-- Successfully tested API endpoints using Postman.
 ## Project Overview
 
-This project is the backend API for the ModestPearls E-commerce Website. It is developed using Node.js and Express.js to handle products, shopping cart operations, and checkout functionality.
-
----
-
-## Technologies Used
-
-- Node.js
-- Express.js
-- JSON
-- REST API
+This project demonstrates the integration of a frontend e-commerce website with a backend API using Express.js and MongoDB. The application allows users to add products to a shopping cart, manage cart items, and place orders, with all data stored in MongoDB.
 
 ---
 
 ## Features
 
-- Get all products
-- View cart
+- Frontend integrated with Express.js backend
+- MongoDB database connection using Mongoose
+- Display products dynamically
 - Add products to cart
-- Remove products from cart
-- Checkout API
-- Basic input validation
+- View cart items
+- Remove items from cart
+- Update product quantity
+- Checkout functionality
+- Store customer orders in MongoDB
+- Clear cart after successful checkout
+
+---
+
+## Technologies Used
+
+### Frontend
+- HTML5
+- CSS3
+- JavaScript
+
+### Backend
+- Node.js
+- Express.js
+
+### Database
+- MongoDB
+- Mongoose
+
+---
+
+## Project Structure
+
+```
+ModestPearls-Backend-API/
+│
+├── config/
+│   └── db.js
+│
+├── models/
+│   ├── Product.js
+│   ├── Cart.js
+│   └── Order.js
+│
+├── routes/
+│   ├── products.js
+│   ├── cart.js
+│   └── checkout.js
+│
+├── server.js
+├── package.json
+└── README.md
+```
 
 ---
 
 ## API Endpoints
 
-### GET /products
+### Products
 
-Returns all available products.
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /products | Get all products |
 
-Example Response
+### Cart
 
-```json
-[
-  {
-    "id": 1,
-    "name": "Black Abaya",
-    "price": 29.99
-  }
-]
-```
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /cart | Get cart items |
+| POST | /cart | Add item to cart |
+| PUT | /cart/:id | Update item quantity |
+| DELETE | /cart/:id | Remove item from cart |
 
----
+### Checkout
 
-### GET /cart
-
-Returns all items currently in the cart.
-
----
-
-### POST /cart
-
-Adds a product to the shopping cart.
-
-Example Request
-
-```json
-{
-  "name": "Black Abaya",
-  "price": 29.99,
-  "quantity": 1
-}
-```
-
-Example Response
-
-```json
-{
-  "message": "Product added to cart successfully!"
-}
-```
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | /checkout | Place an order |
 
 ---
 
-### DELETE /cart/:index
+## Database Collections
 
-Removes a product from the cart.
-
-Example
-
-```
-DELETE /cart/0
-```
+- Products
+- Cart
+- Orders
 
 ---
 
-### POST /checkout
+## How to Run the Project
 
-Places an order.
-
-Example Request
-
-```json
-{
-  "name": "Hafsa Mazhar",
-  "email": "hafsa@example.com",
-  "phone": "03001234567",
-  "address": "Gujrat, Pakistan"
-}
-```
-
-Example Response
-
-```json
-{
-  "message": "Order placed successfully!"
-}
-```
-
----
-
-## Installation
-
-Clone the repository
+### 1. Clone the repository
 
 ```bash
-git clone <repository-link>
+git clone <repository-url>
 ```
 
-Install dependencies
+### 2. Install dependencies
 
 ```bash
 npm install
 ```
 
-Run the project
+### 3. Start MongoDB
+
+Ensure MongoDB is running on:
+
+```
+mongodb://127.0.0.1:27017
+```
+
+### 4. Start the server
 
 ```bash
 node server.js
 ```
 
-Server URL
+The backend will run on:
 
 ```
 http://localhost:3000
@@ -153,9 +132,34 @@ http://localhost:3000
 
 ---
 
+## Project Workflow
+
+1. Browse products
+2. Add products to cart
+3. View cart
+4. Update quantity or remove items
+5. Proceed to checkout
+6. Enter customer information
+7. Order is stored in MongoDB
+8. Cart is cleared automatically
+
+---
+
+## Learning Outcomes
+
+- REST API development using Express.js
+- MongoDB integration with Mongoose
+- CRUD operations
+- Frontend and backend integration
+- Asynchronous API requests using Fetch API
+- Full-stack application development
+
+---
+
 ## Author
 
-Hafsa Mazhar
+**Hafsa Mazhar**
 
 Software Engineering Student
+
 University of Gujrat
